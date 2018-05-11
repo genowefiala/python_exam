@@ -1,0 +1,7 @@
+# Check if file exists: 
+
+import os
+
+a = input("Enter filename: ")
+
+print(os.path.isfile('/etc/p'))
