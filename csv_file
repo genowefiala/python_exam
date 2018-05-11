@@ -1,0 +1,21 @@
+import csv 
+
+with open('grades.csv', 'r') as csvfile:
+        reader = csv.reader(csvfile,delimiter = ',')
+        header = next(reader)
+        passing = []
+        notpassing = []
+        for grade in reader: 
+                if float(grade[2]) >= 5.5:
+                        passing.append(grade[2])
+                else:
+                        notpassing.append(grade[2]) 
+
+
+        print(passing) 
+
+        total = len(passing) + len(notpassing)
+        print(total)
+        percentage = (len(passing) / total) * 100
+        print(percentage)
+
