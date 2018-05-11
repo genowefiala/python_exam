@@ -1,0 +1,10 @@
+a = input("Please enter couple of words:")
+
+b = a.split(' ')
+
+b.sort()
+#a = sorted(a)
+
+#print(set(b))
+
+print(":".join(set(b)))
