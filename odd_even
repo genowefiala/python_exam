@@ -1,0 +1,8 @@
+selection = input("Enter a number: ")
+
+number = int(selection)
+
+if number % 2 == 0:
+    print("Number you entered is odd")
+else:
+    print("Number you entered is even")
