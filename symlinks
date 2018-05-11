@@ -1,0 +1,22 @@
+import os, shutil 
+
+src = os.getcwd()
+files = []
+
+#list of files 
+for x in os.walk(src):
+        for y in x[2]:
+                files.append(y)
+
+# delete dir before creating new 
+dir_path = os.path.join(src,"name-links") 
+if os.path.exists(dir_path):
+        shutil.rmtee(dir_path)
+
+#create dir, save path 
+os.mkdir(dir_path) 
+
+for x in files:
+        print os.path.join(dir_path, x), ">", os.path.join(src,x)
+        os.symlink(os.path.join(src,x), os.path.join(dir_path,x)
+
