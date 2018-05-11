@@ -1,0 +1,30 @@
+from datetime import datetime as d # alias 
+import time, sys
+import random 
+
+while True:
+        z = random.randint(0,10)
+        if z >=2: 
+                file = "apache.txt"
+        elif z < 2: 
+                file = "apache2.txt"    
+        a = open(file, "r")
+        lines = a.readlines()
+        state = lines[1].strip()[8:14] #2 line, slowo active
+
+        if state == "active":
+                # add to stdout buffer
+                sys.stdout.write('.')
+                # write buffer contents to screen
+                sys.stdout.flush()
+#               print ".",
+  
+
+        elif state == "failed":
+                print "\n", d.now() , "Warning" 
+
+        else:
+                print "not important" 
+
+        time.sleep(1)
+
