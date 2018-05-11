@@ -1,0 +1,11 @@
+import os 
+def double(filename):
+        input = raw_input('Enter filename: ')
+        if os.path.exists(input):
+                print "The file exists"
+        else: 
+                print "Creating a file.."
+                file(input, 'w').close()
+                print "Done"
+
+double("string.txt")
