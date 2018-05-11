@@ -1,0 +1,35 @@
+
+import os, time, sys, subprocess
+
+dir_content = os.listdir(".")
+scripts = []
+
+
+for items in dir_content: 
+        if items.endswith('.py'):
+                scripts.append(items)
+
+
+while True:
+
+        for index,elem in enumerate(scripts):
+                print "These are the scripts you can execute:", index, elem
+
+        selection = raw_input("Type the name of the script you want to execute, to quit enter stop:")
+#add input sanitization
+
+
+        if selection == "stop":
+                print "You stopped the script"
+                sys.exit(0)  
+
+        args = [scripts[int(selection)]]
+
+        num_args = int(raw_input("How many args do you want to enter?"))
+        for arguments in range(num_args):
+                args.append(raw_input("If your script needs arguments, enter them here:")) 
+
+        print args
+        subprocess.call(args)
+        #execfile(scripts[int(selection)],args)
+        time.sleep(2)
