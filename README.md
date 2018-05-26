@@ -1,1 +1,4 @@
 # python_exam
+
+useful links:
+https://www.quora.com/Can-you-amaze-me-with-a-Python-trick/answer/Flavian-Mwasi?share=065f4ea4&srid=k2y0
