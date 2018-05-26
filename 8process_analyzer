@@ -9,11 +9,12 @@ def process_analyzer():
         with open(fname) as f:
                 next(f)
                 for i, line in enumerate(f):
-                        pass
-                print "Total number of process is:",  i + 1
+                        if "     \_ " in line:
+                                user_processes.append(line)
 
-                if line.startswith("      \_ "):
-                                user_processes.append(i)
-                print "Number of user-invoked processes", i  
+        print "Total number of process is:",  i + 1
+        print "Number of user-invoked processes", len(user_processes)  
 
 process_analyzer()
+
+
