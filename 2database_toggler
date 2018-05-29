@@ -1,4 +1,4 @@
-mport os, sys
+import os, sys
 
 def db_toggler():
         target = str(sys.argv[2])
