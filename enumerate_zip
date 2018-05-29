@@ -1,0 +1,19 @@
+#enumerate
+my_list = ['apple','banana','orange']
+
+for i,value in enumerate(my_list,1):
+    print(i,value)
+
+
+#zip
+aggregate = zip(fruits,numbers)
+result = set(aggregate)
+print(result)
+
+#unzip 
+x,y = zip(*result)
+print(x,y)
+
+#another zipping option with enumerate 
+for i, (a,b) in enumerate(zip(fruits,numbers),1):
+    print(i,a,b)
